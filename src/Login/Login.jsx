@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import { auth } from "../Firebase/firebase.config";
@@ -10,6 +10,8 @@ const Login = () => {
 
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
+
+    const [showPass, setShowPass] = useState(false);
 
     const handleLogin = e => {
         e.preventDefault();
@@ -64,7 +66,7 @@ const Login = () => {
                         <h1 className="text-5xl font-bold text-center">Login</h1>
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleLogin} className="card-body">
+                        <form className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -75,10 +77,28 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" placeholder="password" name='password' ref={passwordRef} className="input input-bordered" required />
+                                <label className="flex items-center justify-between input input-bordered
+                                ">
+                                    <input
+                                        type={
+                                            showPass ?
+                                                'text' : 'password'
+                                        }
+                                        placeholder="password" name='password'
+                                        ref={passwordRef} className="" required />
+                                    <button onClick={() => setShowPass(!showPass)}>
+                                        {showPass ?
+                                            <img className="w-6" src="/src/assets/hide.png" alt="" />
+                                            :
+                                            <img className="w-6" src="/src/assets/eyeOpen.png" alt="" />
+                                    }
+                                    </button>
+                                </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                                <button
+                                onClick={handleLogin}
+                                className="btn btn-primary">Login</button>
                             </div>
                             <div>
                                 <h1 className="text-base">New here? <Link to='/register'><span className="hover:text-blue-500">Register now</span></Link></h1>

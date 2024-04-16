@@ -8,7 +8,6 @@ const Navbar = () => {
 
     const links = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/profile'>Profile</Link></li>
         <li><Link to='/update'>Update Profile</Link></li>
     </>
 
@@ -45,7 +44,7 @@ const Navbar = () => {
                 <div className="navbar-end gap-2">
                     {user ?
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
+                            <div title={ user.displayName } className="w-10 rounded-full">
                                 <img src={ user.photoURL } />
                             </div>
                         </div>
