@@ -31,7 +31,7 @@ const AuthProvider = ({ children }) => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
             setLoader(false);
-            console.log('observing current user inside useEffect Auth provider: ', currentUser.email);
+            // console.log('observing current user inside useEffect Auth provider: ', currentUser.photoURL);
 
         })
         return () => {
@@ -43,6 +43,7 @@ const AuthProvider = ({ children }) => {
     const authInfo =
     {
         user,
+        setUser,
         createUser,
         signInUser,
         logOut,

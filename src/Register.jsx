@@ -1,6 +1,8 @@
 import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./Login/AuthProvider";
+import { updateProfile } from "firebase/auth";
+import { auth } from "./Firebase/firebase.config";
 
 const Register = () => {
 
@@ -19,9 +21,28 @@ const Register = () => {
         const url = imageRef.current.value;
         const name = nameRef.current.value;
 
+        if(pass.length<6){
+            return console.log('password must be atleast 6');
+        }
+        else if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(pass)){
+            return console.log('there must be at least 1 uppercase, 1 lowercase in the password');
+        }
+
+
         createUser(email, pass)
             .then((result) => {
-                console.log(result.user);
+                console.log(result.user)
+                updateProfile(auth.currentUser, {
+                    displayName: name,
+                    photoURL: url
+                })
+                    .then(() => {
+                        console.log('photo succsefull');
+                    })
+                    .catch((error) => {
+                        console.log(error.message)
+                    })
+                alert('profile created');
             })
             .catch((error) => {
                 console.log(error.message);
@@ -53,8 +74,8 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" placeholder="email" 
-                                name='email' ref={emailRef}className="input input-bordered" required />
+                                <input type="email" placeholder="email"
+                                    name='email' ref={emailRef} className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -67,7 +88,7 @@ const Register = () => {
                             </div>
                             <div>
                                 <h1 className="text-base">Already have an account?
-                                <Link to='/login'><span className="hover:text-blue-500"> Login here</span></Link>
+                                    <Link to='/login'><span className="hover:text-blue-500"> Login here</span></Link>
                                 </h1>
                             </div>
                         </form>

@@ -1,10 +1,12 @@
 import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
+import { auth } from "../Firebase/firebase.config";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const Login = () => {
 
-    const { signInUser } = useContext(AuthContext);
+    const { signInUser, setUser } = useContext(AuthContext);
 
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
@@ -23,6 +25,22 @@ const Login = () => {
             })
             .catch((error) => {
                 console.log(error.message);
+            })
+    }
+
+    const googleProvider = new GoogleAuthProvider();
+    // const githubProvider = new GithubAuthProvider();
+
+    const handleGoogleAuth = () => {
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                const loggedInUser = result.user;
+                console.log(loggedInUser);
+                // alert('google login successfull');
+                setUser(loggedInUser);
+            })
+            .catch(error => {
+                console.log('error: ', error.code)
             })
     }
 
@@ -55,9 +73,13 @@ const Login = () => {
                             </div>
                         </form>
                     </div>
+                    <div className="flex gap-2">
+                        <h1 className="text-base">login with:</h1>
+                        <button onClick={handleGoogleAuth}><img className="w-5" src="/src/assets/google.png" alt="" /></button>
+
+                    </div>
                 </div>
             </div>
-
         </div>
     );
 };
