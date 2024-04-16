@@ -1,12 +1,12 @@
 import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
-// import { auth } from "../Firebase/firebase.config";
-// import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth } from "../Firebase/firebase.config";
+import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const Login = () => {
 
-    const { signInUser, setUser, handleGoogleAuth } = useContext(AuthContext);
+    const { signInUser, setUser } = useContext(AuthContext);
 
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
@@ -28,21 +28,33 @@ const Login = () => {
             })
     }
 
-    // const googleProvider = new GoogleAuthProvider();
-    // // const githubProvider = new GithubAuthProvider();
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
-    // const handleGoogleAuth = () => {
-    //     signInWithPopup(auth, googleProvider)
-    //         .then(result => {
-    //             const loggedInUser = result.user;
-    //             console.log(loggedInUser);
-    //             // alert('google login successfull');
-    //             setUser(loggedInUser);
-    //         })
-    //         .catch(error => {
-    //             console.log('error: ', error.code)
-    //         })
-    // }
+    const handleGoogleAuth = () => {
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                const loggedInUser = result.user;
+                console.log(loggedInUser);
+                // alert('google login successfull');
+                setUser(loggedInUser);
+            })
+            .catch(error => {
+                console.log('error: ', error.message)
+            })
+    }
+    const handleGitHubAuth = () => {
+        signInWithPopup(auth, githubProvider)
+            .then(result => {
+                const loggedInUser = result.user;
+                console.log(loggedInUser);
+                // alert('google login successfull');
+                setUser(loggedInUser);
+            })
+            .catch(error => {
+                console.log('error: ', error.message)
+            })
+    }
 
     return (
         <div className="my-14">
@@ -76,6 +88,7 @@ const Login = () => {
                     <div className="flex gap-2">
                         <h1 className="text-base">login with:</h1>
                         <button onClick={handleGoogleAuth}><img className="w-5" src="/src/assets/google.png" alt="" /></button>
+                        <button onClick={handleGitHubAuth}><img className="w-5" src="/src/assets/github.png" alt="" /></button>
 
                     </div>
                 </div>
