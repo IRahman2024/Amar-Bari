@@ -1,0 +1,43 @@
+[
+    {
+      "image_url": "https://example.com/house1.jpg",
+      "estate_title": "Cozy Cottage in the Woods",
+      "id": "001",
+      "description": "This charming cottage nestled in the woods offers peace and tranquility. Featuring two bedrooms, a spacious living area, and a beautiful garden, it's perfect for nature lovers.",
+      "price": 250000,
+      "status": "For Sale",
+      "total_area": 1200,
+      "location": "Forest Retreat, Anytown"
+    },
+    {
+      "image_url": "https://example.com/house2.jpg",
+      "estate_title": "Modern Urban Loft",
+      "id": "002",
+      "description": "Enjoy contemporary living in this stylish urban loft. With sleek design, high ceilings, and expansive city views, it's an ideal space for urban professionals.",
+      "price": 500000,
+      "status": "For Sale",
+      "total_area": 1500,
+      "location": "Downtown Metropolis"
+    },
+    {
+      "image_url": "https://example.com/house3.jpg",
+      "estate_title": "Family-Friendly Suburban Home",
+      "id": "003",
+      "description": "This spacious suburban home offers comfort and convenience for families. Featuring four bedrooms, a large backyard, and proximity to schools, it's perfect for raising children.",
+      "price": 350000,
+      "status": "For Sale",
+      "total_area": 2000,
+      "location": "Suburbia Hills"
+    },
+    {
+      "image_url": "https://example.com/house4.jpg",
+      "estate_title": "Coastal Retreat",
+      "id": "004",
+      "description": "Escape to this serene coastal retreat overlooking the ocean. With beach access, a spacious deck, and breathtaking views, it's an ideal getaway for relaxation.",
+      "price": 700000,
+      "status": "For Sale",
+      "total_area": 1800,
+      "location": "Oceanfront Paradise"
+    }
+  ]
+  
