@@ -1,12 +1,12 @@
 import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
-import { auth } from "../Firebase/firebase.config";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+// import { auth } from "../Firebase/firebase.config";
+// import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const Login = () => {
 
-    const { signInUser, setUser } = useContext(AuthContext);
+    const { signInUser, setUser, handleGoogleAuth } = useContext(AuthContext);
 
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
@@ -28,21 +28,21 @@ const Login = () => {
             })
     }
 
-    const googleProvider = new GoogleAuthProvider();
-    // const githubProvider = new GithubAuthProvider();
+    // const googleProvider = new GoogleAuthProvider();
+    // // const githubProvider = new GithubAuthProvider();
 
-    const handleGoogleAuth = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                const loggedInUser = result.user;
-                console.log(loggedInUser);
-                // alert('google login successfull');
-                setUser(loggedInUser);
-            })
-            .catch(error => {
-                console.log('error: ', error.code)
-            })
-    }
+    // const handleGoogleAuth = () => {
+    //     signInWithPopup(auth, googleProvider)
+    //         .then(result => {
+    //             const loggedInUser = result.user;
+    //             console.log(loggedInUser);
+    //             // alert('google login successfull');
+    //             setUser(loggedInUser);
+    //         })
+    //         .catch(error => {
+    //             console.log('error: ', error.code)
+    //         })
+    // }
 
     return (
         <div className="my-14">

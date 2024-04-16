@@ -2,7 +2,7 @@ import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./Login/AuthProvider";
 import { updateProfile } from "firebase/auth";
-import { auth } from "./Firebase/firebase.config";
+// import { auth } from "./Firebase/firebase.config";
 
 const Register = () => {
 
