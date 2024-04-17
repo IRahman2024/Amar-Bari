@@ -1,12 +1,9 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { AuthContext } from "./Login/AuthProvider";
 
 const Profile = () => {
 
     const { user } = useContext(AuthContext);
-
-    console.log(user);
-
     return (
         <div className="my-14">
             <div className="hero min-h-screen bg-base-200">

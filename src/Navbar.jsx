@@ -8,7 +8,13 @@ const Navbar = () => {
 
     const links = <>
         <li><Link to='/'>Home</Link></li>
-        {user && <li><Link to='/profile'>Profile</Link></li>}
+        {user &&
+            (
+                <>
+                    <li><Link to='/profile'>Profile</Link></li> <li><Link to='/Update'>Update Profile</Link></li>
+                </>
+            )
+        }
     </>
 
     const handleSignOut = () => {
@@ -44,8 +50,8 @@ const Navbar = () => {
                 <div className="navbar-end gap-2">
                     {user ?
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div title={ user.displayName } className="w-10 rounded-full">
-                                <img src={ user.photoURL } />
+                            <div title={user.displayName} className="w-10 rounded-full">
+                                <img src={user.photoURL} />
                             </div>
                         </div>
                         : <div></div>

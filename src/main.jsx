@@ -10,9 +10,9 @@ import Home from './Home';
 import Login from './Login/Login';
 import Register from './Register';
 import AuthProvider from './Login/AuthProvider';
-import Update from './Profile';
 import Profile from './Profile';
 import PvtRoute from './PvtRoute/PvtRoute';
+import Update from './Update';
 
 const router = createBrowserRouter([
   {
