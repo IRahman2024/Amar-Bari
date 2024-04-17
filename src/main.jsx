@@ -13,12 +13,17 @@ import AuthProvider from './Login/AuthProvider';
 import Profile from './Profile';
 import PvtRoute from './PvtRoute/PvtRoute';
 import Update from './Update';
+import CardDetails from './CardDetails';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
     children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
       {
         path: '/login',
         element: <Login></Login>
@@ -34,6 +39,11 @@ const router = createBrowserRouter([
       {
         path: '/update',
         element: <PvtRoute><Update></Update></PvtRoute>
+      },
+      {
+        path: '/card/:idm',
+        element: <PvtRoute><CardDetails></CardDetails></PvtRoute>,
+        loader: () => fetch('/RealState.json')
       }
     ]
   },

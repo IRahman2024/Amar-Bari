@@ -1,10 +1,12 @@
-import Navbar from "./Navbar";
+import Cards from "./Cards";
 
 const Home = () => {
+
+
     return (
         <div>
-            <h1>This is home</h1>
-            <Navbar></Navbar>     
+            
+            <Cards></Cards>
         </div>
     );
 };

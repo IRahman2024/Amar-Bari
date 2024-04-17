@@ -1,0 +1,101 @@
+[
+  {
+    "image_url": "https://i.ibb.co/L88ScxG/david-vives-Fcanz8wm-1-U-unsplash.jpg",
+    "estate_title": "Cozy Cottage in the Woods",
+    "id": "001",
+    "description": "This charming cottage nestled in the woods offers peace and tranquility. Featuring two bedrooms, a spacious living area, and a beautiful garden, it's perfect for nature lovers.",
+    "price": 250000,
+    "status": "For Sale",
+    "total_area": 1200,
+    "location": "Forest Retreat, Anytown",
+    "property_type": "Single-family home"
+  },
+  {
+    "image_url": "https://i.ibb.co/M5bdKMP/frames-for-your-heart-2d4l-AQAlb-DA-unsplash.jpg",
+    "estate_title": "Modern Urban Loft",
+    "id": "002",
+    "description": "Enjoy contemporary living in this stylish urban loft. With sleek design, high ceilings, and expansive city views, it's an ideal space for urban professionals.",
+    "price": 500000,
+    "status": "For Sale",
+    "total_area": 1500,
+    "location": "Downtown Metropolis",
+    "property_type": "Apartment"
+  },
+  {
+    "image_url": "https://i.ibb.co/z4vnd8f/house-on-a-farm-1221758.jpg",
+    "estate_title": "Family-Friendly Suburban Home",
+    "id": "003",
+    "description": "This spacious suburban home offers comfort and convenience for families. Featuring four bedrooms, a large backyard, and proximity to schools, it's perfect for raising children.",
+    "price": 350000,
+    "status": "For Sale",
+    "total_area": 2000,
+    "location": "Suburbia Hills",
+    "property_type": "Single-family home"
+  },
+  {
+    "image_url": "https://i.ibb.co/NVcF0fZ/marcus-lenk-w-KO0rx50-VWo-unsplash.jpg",
+    "estate_title": "Coastal Retreat",
+    "id": "004",
+    "description": "Escape to this serene coastal retreat overlooking the ocean. With beach access, a spacious deck, and breathtaking views, it's an ideal getaway for relaxation.",
+    "price": 700000,
+    "status": "For Sale",
+    "total_area": 1800,
+    "location": "Oceanfront Paradise",
+    "property_type": "Vacation rental"
+  },
+  {
+    "image_url": "https://i.ibb.co/FKzMfDK/r-architecture-2g-Dwl-Iim3-Uw-unsplash.jpg",
+    "estate_title": "Spacious Townhouse in the Heart of the City",
+    "id": "005",
+    "description": "This stylish townhouse offers contemporary living in a prime location. With three bedrooms, a rooftop terrace, and proximity to shops and restaurants, it's perfect for city living.",
+    "price": 600000,
+    "status": "For Sale",
+    "total_area": 2200,
+    "location": "City Center",
+    "property_type": "Townhouse"
+  },
+  {
+    "image_url": "https://i.ibb.co/xjh43NV/r-architecture-GGupkre-Kwx-A-unsplash.jpg",
+    "estate_title": "Charming Victorian Home",
+    "id": "006",
+    "description": "Step back in time with this beautifully restored Victorian home. Featuring ornate details, a wrap-around porch, and a landscaped garden, it's a historic gem in a quaint neighborhood.",
+    "price": 450000,
+    "status": "For Sale",
+    "total_area": 2800,
+    "location": "Historic District",
+    "property_type": "Single-family home"
+  },
+  {
+    "image_url": "https://i.ibb.co/72kVNMG/r-architecture-Y8-MJFQYYjh8-unsplash.jpg",
+    "estate_title": "Luxury High-rise Apartment",
+    "id": "007",
+    "description": "Indulge in luxury living with this high-rise apartment offering panoramic views of the city skyline. With modern amenities, concierge service, and a fitness center, it's urban living at its finest.",
+    "price": 900000,
+    "status": "For Sale",
+    "total_area": 2000,
+    "location": "Skyline Towers",
+    "property_type": "Apartment"
+  },
+  {
+    "image_url": "https://i.ibb.co/DfPpDgp/zac-gudakov-fa-BWQt9i7dg-unsplash.jpg",
+    "estate_title": "Quaint Cottage by the Lake",
+    "id": "008",
+    "description": "Escape to this picturesque cottage nestled by the lake. With a private dock, cozy fireplace, and scenic views, it's an idyllic retreat for relaxation and recreation.",
+    "price": 350000,
+    "status": "For Sale",
+    "total_area": 1500,
+    "location": "Lakeside Haven",
+    "property_type": "Vacation rental"
+  },
+  {
+    "image_url": "https://i.ibb.co/NFDMfRD/zac-gudakov-wwq-Z8-CM21gg-unsplash.jpg",
+    "estate_title": "Modern Condo with Ocean Views",
+    "id": "009",
+    "description": "Experience coastal living in this sleek modern condo with stunning ocean views. With floor-to-ceiling windows, a private balcony, and beach access, it's perfect for those seeking luxury by the sea.",
+    "price": 800000,
+    "status": "For Sale",
+    "total_area": 1800,
+    "location": "Oceanfront Oasis",
+    "property_type": "Condo"
+  }
+]
