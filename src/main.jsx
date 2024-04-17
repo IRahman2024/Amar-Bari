@@ -10,6 +10,9 @@ import Home from './Home';
 import Login from './Login/Login';
 import Register from './Register';
 import AuthProvider from './Login/AuthProvider';
+import Update from './Profile';
+import Profile from './Profile';
+import PvtRoute from './PvtRoute/PvtRoute';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +29,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/profile',
-        element: <Home></Home>
+        element: <PvtRoute><Profile></Profile></PvtRoute>
+      },
+      {
+        path: '/update',
+        element: <PvtRoute><Update></Update></PvtRoute>
       }
     ]
   },

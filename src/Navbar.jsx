@@ -8,7 +8,7 @@ const Navbar = () => {
 
     const links = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/update'>Update Profile</Link></li>
+        {user && <li><Link to='/profile'>Profile</Link></li>}
     </>
 
     const handleSignOut = () => {
