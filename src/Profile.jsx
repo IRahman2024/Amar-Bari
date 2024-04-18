@@ -14,7 +14,7 @@ const Profile = () => {
             <Helmet>
                 <title>Profile</title>
             </Helmet>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-white">
                 <div className="hero-content flex-col animate__animated animate__backInUp">
                     <img 
                     className="w-24 rounded-full"
@@ -23,7 +23,7 @@ const Profile = () => {
                         <h1 className="text-5xl font-bold text-center">{user?.displayName}</h1>
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form className="card-body">
+                        <form className="card-body bg-white">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>

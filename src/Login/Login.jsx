@@ -77,13 +77,13 @@ const Login = () => {
             <Helmet>
                 <title>Login</title>
             </Helmet>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200 bg-white">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold text-center">Login</h1>
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form className="card-body">
+                        <form className="card-body bg-white">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>

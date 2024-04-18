@@ -16,7 +16,7 @@ const CardDetails = () => {
             <Helmet>
                 <title>Property Details</title>
             </Helmet>
-            <div className="flex lg:flex-row md:flex-col flex-col items-center lg:justify-around my-14">
+            <div className="flex lg:flex-row md:flex-col flex-col items-center lg:justify-around my-14 bg-white">
                 <div className="lg:w-1/2 md:w-3/4 sm:w-[200px] lg:mb-0 mb-8">
                     <img className="rounded-2xl" src={image_url} alt="" />
                 </div>
