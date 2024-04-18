@@ -3,6 +3,7 @@ import { AuthContext } from "./Login/AuthProvider";
 import 'animate.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 
 const Profile = () => {
@@ -10,6 +11,9 @@ const Profile = () => {
     const { user } = useContext(AuthContext);
     return (
         <div>
+            <Helmet>
+                <title>Profile</title>
+            </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col animate__animated animate__backInUp">
                     <img 

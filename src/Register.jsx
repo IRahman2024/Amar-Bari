@@ -5,6 +5,7 @@ import { updateProfile } from "firebase/auth";
 // import { auth } from "./Firebase/firebase.config";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
@@ -53,6 +54,9 @@ const Register = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Register New Account</title>
+            </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">

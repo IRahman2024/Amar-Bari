@@ -1,15 +1,19 @@
 import { useContext, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import { auth } from "../Firebase/firebase.config";
 import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 
     const { signInUser, setUser } = useContext(AuthContext);
+
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
@@ -28,6 +32,7 @@ const Login = () => {
                 // e.target.reset(); //to clear form after login
                 // navigate('/'); //to automatically open home after login 
                 toast("Login successful!")
+                navigate(location?.state ? location.state : '/');
             })
             .catch((error) => {
                 console.log(error.message);
@@ -69,6 +74,9 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Login</title>
+            </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">

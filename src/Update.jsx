@@ -3,6 +3,7 @@ import { useContext, useRef } from "react";
 import { auth } from "./Firebase/firebase.config";
 import { AuthContext } from "./Login/AuthProvider";
 import 'animate.css'
+import { Helmet } from "react-helmet-async";
 
 const Update = () => {
 
@@ -38,6 +39,9 @@ const Update = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Update Profile</title>
+            </Helmet>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col animate__animated animate__slideInDown">
                     <div className="text-center lg:text-left">
