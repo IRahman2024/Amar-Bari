@@ -105,9 +105,9 @@ const Login = () => {
                                         ref={passwordRef} className="" required />
                                     <button onClick={() => setShowPass(!showPass)}>
                                         {showPass ?
-                                            <img className="w-6" src="/src/assets/hide.png" alt="" />
+                                            <img className="w-6" src="/public/hide.png" alt="" />
                                             :
-                                            <img className="w-6" src="/src/assets/eyeOpen.png" alt="" />
+                                            <img className="w-6" src="/public/eyeOpen.png" alt="" />
                                     }
                                     </button>
                                 </label>
@@ -124,8 +124,8 @@ const Login = () => {
                     </div>
                     <div className="flex gap-2">
                         <h1 className="text-base">login with:</h1>
-                        <button onClick={handleGoogleAuth}><img className="w-5" src="/src/assets/google.png" alt="" /></button>
-                        <button onClick={handleGitHubAuth}><img className="w-5" src="/src/assets/github.png" alt="" /></button>
+                        <button onClick={handleGoogleAuth}><img className="w-5" src="/public/google.png" alt="" /></button>
+                        <button onClick={handleGitHubAuth}><img className="w-5" src="/public/github.png" alt="" /></button>
 
                     </div>
                 </div>
