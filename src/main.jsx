@@ -15,6 +15,9 @@ import PvtRoute from './PvtRoute/PvtRoute';
 import Update from './Update';
 import CardDetails from './CardDetails';
 
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+
 const router = createBrowserRouter([
   {
     path: "/",

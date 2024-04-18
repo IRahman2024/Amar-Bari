@@ -1,14 +1,20 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./Login/AuthProvider";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 const Card = ({ card }) => {
 
     const { descriptions, id, image_url, location, price, status, total_area, estate_title } = card;
     const { user } = useContext(AuthContext);
 
+    useEffect(() => {
+        Aos.init();
+    }, [])
+
     return (
-        <div className="my-3">
+        <div className="my-3" data-aos='fade-right'>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="max-h-3/4"><img src={image_url} /></figure>
                 <div className="card-body text-start">

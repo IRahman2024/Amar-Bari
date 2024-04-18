@@ -1,13 +1,15 @@
+import { useEffect } from "react";
 import Banner from "./Banner";
 import Cards from "./Cards";
 
 const Home = () => {
 
-
     return (
         <div>
             <Banner></Banner>
-            <Cards></Cards>
+            <div >
+                <Cards></Cards>
+            </div>
         </div>
     );
 };
