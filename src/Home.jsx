@@ -1,3 +1,4 @@
+import Banner from "./Banner";
 import Cards from "./Cards";
 
 const Home = () => {
@@ -5,7 +6,7 @@ const Home = () => {
 
     return (
         <div>
-            
+            <Banner></Banner>
             <Cards></Cards>
         </div>
     );
