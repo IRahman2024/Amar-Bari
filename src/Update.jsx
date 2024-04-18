@@ -38,7 +38,7 @@ const Update = () => {
 
 
     return (
-        <div>
+        <div className="bg-white">
             <Helmet>
                 <title>Update Profile</title>
             </Helmet>

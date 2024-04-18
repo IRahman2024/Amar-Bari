@@ -73,7 +73,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="bg-white">
             <Helmet>
                 <title>Login</title>
             </Helmet>

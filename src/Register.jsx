@@ -53,7 +53,7 @@ const Register = () => {
     }
 
     return (
-        <div>
+        <div className="bg-white">
             <Helmet>
                 <title>Register New Account</title>
             </Helmet>

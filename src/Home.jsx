@@ -11,7 +11,7 @@ const Home = () => {
                 <title>Amar Bari | Home</title>
             </Helmet>
             <Banner></Banner>
-            <div className="text-center my-5 grid gap-2 lg:gap-5">
+            <div className="text-center my-5 grid gap-2 lg:gap-5 bg-white">
                 <p className="text-4xl font-bold">Our testimonials</p>
             </div>
             <div className="m-8 grid gap-4 grid-cols-1 lg:grid-cols-2">
@@ -34,7 +34,7 @@ const Home = () => {
                 </p>
                 
             </div>
-            <div >
+            <div className="bg-white">
                 <Cards></Cards>
             </div>
         </div>

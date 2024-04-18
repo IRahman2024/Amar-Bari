@@ -10,7 +10,7 @@ const Profile = () => {
 
     const { user } = useContext(AuthContext);
     return (
-        <div>
+        <div className="bg-white">
             <Helmet>
                 <title>Profile</title>
             </Helmet>
