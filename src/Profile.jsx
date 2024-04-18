@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { AuthContext } from "./Login/AuthProvider";
 import 'animate.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Profile = () => {
 
@@ -13,7 +16,7 @@ const Profile = () => {
                     className="w-24 rounded-full"
                     src={user?.photoURL} alt="" />
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold text-center"><span>{user?.displayName}'s</span> Profile</h1>
+                        <h1 className="text-5xl font-bold text-center">{user?.displayName}</h1>
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form className="card-body">

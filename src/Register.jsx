@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "./Login/AuthProvider";
 import { updateProfile } from "firebase/auth";
 // import { auth } from "./Firebase/firebase.config";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
@@ -22,10 +24,10 @@ const Register = () => {
         const name = nameRef.current.value;
 
         if(pass.length<6){
-            return console.log('password must be atleast 6');
+            return toast.error('password must be 6 characters long!');
         }
         else if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(pass)){
-            return console.log('there must be at least 1 uppercase, 1 lowercase in the password');
+            return toast.error('there must be at least 1 uppercase, 1 lowercase in the password');
         }
 
 
@@ -42,15 +44,15 @@ const Register = () => {
                     .catch((error) => {
                         console.log(error.message)
                     })
-                alert('profile created');
+                toast('profile created');
             })
             .catch((error) => {
-                console.log(error.message);
+                toast.error('something went wrong try again');
             })
     }
 
     return (
-        <div className="my-14">
+        <div>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
@@ -62,13 +64,13 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" name='name' ref={nameRef} placeholder="Name" className="input input-bordered" />
+                                <input type="text" name='name' ref={nameRef} placeholder="Name" className="input input-bordered" required/>
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Photo Url</span>
                                 </label>
-                                <input type="text" name='image' ref={imageRef} placeholder="Image url" className="input input-bordered" />
+                                <input type="text" name='image' ref={imageRef} placeholder="Image url" className="input input-bordered" required/>
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -95,7 +97,9 @@ const Register = () => {
                     </div>
                 </div>
             </div>
-
+            <ToastContainer
+            position="top-center"
+            />
         </div>
     );
 };

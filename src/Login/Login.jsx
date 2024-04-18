@@ -4,6 +4,9 @@ import { AuthContext } from "./AuthProvider";
 import { auth } from "../Firebase/firebase.config";
 import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
 
     const { signInUser, setUser } = useContext(AuthContext);
@@ -24,9 +27,11 @@ const Login = () => {
                 console.log(result.user);
                 // e.target.reset(); //to clear form after login
                 // navigate('/'); //to automatically open home after login 
+                toast("Login successful!")
             })
             .catch((error) => {
                 console.log(error.message);
+                toast.error('Wrong credentials try again');
             })
     }
 
@@ -40,9 +45,11 @@ const Login = () => {
                 console.log(loggedInUser);
                 // alert('google login successfull');
                 setUser(loggedInUser);
+                toast("Login successful!")
             })
             .catch(error => {
                 console.log('error: ', error.message)
+                toast.error('Wrong credentials try again');
             })
     }
     const handleGitHubAuth = () => {
@@ -52,14 +59,16 @@ const Login = () => {
                 console.log(loggedInUser);
                 // alert('google login successfull');
                 setUser(loggedInUser);
+                toast("Login successful!")
             })
             .catch(error => {
                 console.log('error: ', error.message)
+                toast.error('Wrong credentials try again');
             })
     }
 
     return (
-        <div className="my-14">
+        <div>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
@@ -113,6 +122,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
