@@ -14,7 +14,7 @@ import { Navigation, Keyboard, Pagination, Autoplay, EffectFade } from 'swiper/m
 
 const Banner = () => {
     return (
-        <div className='mt-12 mx-24'>
+        <div className='mt-12 lg:mx-24'>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
@@ -31,8 +31,8 @@ const Banner = () => {
                 //     clickable: true,
                 // }}
                 navigation={true} modules={[Keyboard, Pagination, Navigation, Autoplay, EffectFade ]}
-                className="mySwiper">
-                <SwiperSlide className='py-52 slide1'>
+                className="mySwiper rounded-2xl">
+                <SwiperSlide className='py-52 slide8'>
                     <p className='text-3xl font-bold'>I've carcked it</p>
                 </SwiperSlide>
                 <SwiperSlide className='py-52 slide2'>Slide 2</SwiperSlide>

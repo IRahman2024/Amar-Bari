@@ -2,7 +2,7 @@ import { updateProfile } from "firebase/auth";
 import { useContext, useRef } from "react";
 import { auth } from "./Firebase/firebase.config";
 import { AuthContext } from "./Login/AuthProvider";
-
+import 'animate.css'
 
 const Update = () => {
 
@@ -37,9 +37,9 @@ const Update = () => {
 
 
     return (
-        <div className="my-14">
+        <div>
             <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col">
+                <div className="hero-content flex-col animate__animated animate__slideInDown">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold text-center">Update You Profile</h1>
                     </div>

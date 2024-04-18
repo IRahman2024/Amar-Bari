@@ -1,13 +1,14 @@
 import { useContext } from "react";
 import { AuthContext } from "./Login/AuthProvider";
+import 'animate.css'
 
 const Profile = () => {
 
     const { user } = useContext(AuthContext);
     return (
-        <div className="my-14">
+        <div>
             <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col">
+                <div className="hero-content flex-col animate__animated animate__backInUp">
                     <img 
                     className="w-24 rounded-full"
                     src={user?.photoURL} alt="" />

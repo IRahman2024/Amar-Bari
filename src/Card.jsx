@@ -15,7 +15,7 @@ const Card = ({ card }) => {
 
     return (
         <div className="my-3" data-aos='fade-right'>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card md:w-72 lg:w-96 bg-base-100 shadow-xl">
                 <figure className="max-h-3/4"><img src={image_url} /></figure>
                 <div className="card-body text-start">
                     <h2 className="card-title">{estate_title}</h2>
