@@ -18,11 +18,13 @@ import CardDetails from './CardDetails';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { HelmetProvider } from 'react-helmet-async';
+import ErrorPage2 from './CaveManErrorPage/ErrorPage2';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage2></ErrorPage2>,
     children: [
       {
         path: '/',

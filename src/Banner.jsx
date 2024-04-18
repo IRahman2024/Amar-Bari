@@ -33,13 +33,29 @@ const Banner = () => {
                 navigation={true} modules={[Keyboard, Pagination, Navigation, Autoplay, EffectFade ]}
                 className="mySwiper rounded-2xl">
                 <SwiperSlide className='py-52 slide8'>
-                    <p className='text-3xl font-bold'>I've carcked it</p>
+                    <p className='text-3xl font-bold text-white'>Welcome to <br />
+                    Amar Bari</p>
                 </SwiperSlide>
-                <SwiperSlide className='py-52 slide2'>Slide 2</SwiperSlide>
-                <SwiperSlide className='py-52 slide3'>Slide 3</SwiperSlide>
-                <SwiperSlide className='py-52 slide4'>Slide 4</SwiperSlide>
-                <SwiperSlide className='py-52 slide5'>Slide 5</SwiperSlide>
-                <SwiperSlide className='py-52 r slide7'>Slide 6</SwiperSlide>
+                <SwiperSlide className='py-52 slide2'>
+                <p className='text-3xl font-bold text-white'>Welcome to <br />
+                    Amar Bari</p>
+                </SwiperSlide>
+                <SwiperSlide className='py-52 slide3'>
+                <p className='text-3xl font-bold text-white'>Welcome to <br />
+                    Amar Bari</p>
+                </SwiperSlide>
+                <SwiperSlide className='py-52 slide4'>
+                <p className='text-3xl font-bold text-white'>Welcome to <br />
+                    Amar Bari</p>
+                </SwiperSlide>
+                <SwiperSlide className='py-52 slide5'>
+                <p className='text-3xl font-bold text-white'>Welcome to <br />
+                    Amar Bari</p>
+                </SwiperSlide>
+                <SwiperSlide className='py-52 r slide7'>
+                <p className='text-3xl font-bold text-white'>Welcome to <br />
+                    Amar Bari</p>
+                </SwiperSlide>
             </Swiper>
         </div>
     );
