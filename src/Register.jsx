@@ -6,6 +6,7 @@ import { updateProfile } from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
+import { auth } from "./Firebase/firebase.config";
 
 const Register = () => {
 
@@ -49,6 +50,7 @@ const Register = () => {
             })
             .catch((error) => {
                 toast.error('something went wrong try again');
+                console.log(error.message)
             })
     }
 

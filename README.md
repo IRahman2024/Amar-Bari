@@ -15,6 +15,11 @@ I've also used
 2. SwiperJS for slider
 3. Animate CSS for route Animation
 
-This is my github link: https://github.com/programming-hero-web-course-4/b9a9-real-estate-IRahman2024
+This is my github link: https://github.com/IRahman2024/Amar-Bari
 
-This is my Live-link: https://662157e5e6b6320078b35a78--candid-choux-120b1a.netlify.app/
+This is my Live-link: https://amar-bari.netlify.app/
+
+40-9
+47-9
+52_5-8
+56_5-8
